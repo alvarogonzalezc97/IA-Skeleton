@@ -10,7 +10,7 @@ skills, MCP y flujo spec-driven (SDD).
 
 ## Estado
 
-Versión actual: **v0.7** — reglas + memoria + comandos + skills + MCP + SDD + subagentes.
+Versión actual: **v1.0** — reglas + memoria + comandos + skills + MCP + SDD + subagentes.
 
 ## Contenido
 
