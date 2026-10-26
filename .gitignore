@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Builds
+dist/
+coverage/
+
+# Env & secrets
+.env
+.env.*
+
+# OS
+.DS_Store

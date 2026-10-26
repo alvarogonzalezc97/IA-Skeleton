@@ -22,6 +22,7 @@ con estructura Next.js 14 (App Router). Sin app real todavía, solo plantillas.
 - `AGENTS.md` reglas del agente. `MEMORY.md` memoria del proyecto.
 - `.opencode/commands/` familia `/sdd/*` (9 en `sdd/`: constitution, spec, clarify, plan, tasks, implement, validate, change, status) + `/publicar-git`, `/nuevo-componente`.
 - `.opencode/skills/` skills `sdd`, `publicar-git`, `nextjs-patterns`, `tailwind-estilos`, `actualizar-memoria`.
+- `.opencode/agents/` subagentes SDD: coordinador, planner, implementer, reviewer. Ver `docs/SDD.md`.
 - `specs/` constitución + `spec.md`, `plan.md`, `tasks.md` por feature. Ver `docs/SDD.md`.
 
 ## Convenciones de código
@@ -67,6 +68,7 @@ con estructura Next.js 14 (App Router). Sin app real todavía, solo plantillas.
 - Feature real: loop paso a paso con comandos `/sdd/*` y aprobación explícita en cada fase. Nunca avances de fase sin aprobación.
 - Trivial o prototipo: directo o spec-first (la spec muere tras generar).
 - Si cambia el criterio, `/sdd/change` primero y regenera plan+tasks.
+- Subagentes: coordinador (orquesta el flujo), planner (spec/plan/tasks), implementer (una tarea + TDD), reviewer (QA + validación RF); contexto entre fases vía `specs/NNN/`.
 - En criterio de producto manda la constitución; en proceso manda este archivo.
 
 ## Memoria (detalle en skill `actualizar-memoria`)

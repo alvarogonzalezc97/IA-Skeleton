@@ -61,6 +61,15 @@ constitution (1 vez)
 - Skill `sdd` → la IA la carga sola al trabajar en `specs/`.
 - Ejemplo completo: `specs/001-ejemplo-temas/` (spec, plan, tasks).
 
+## Subagentes
+
+El flujo SDD se ejecuta con cuatro subagentes (definidos en `.opencode/agents/`):
+
+- **Coordinador:** orquesta el loop completo (spec → clarify → plan → tasks → implement → validate) delegando en planner, implementer y reviewer. Gestiona las puertas de aprobación con el usuario.
+- **Planner:** redacta spec/plan/tasks desde una petición. No toca código.
+- **Implementer:** implementa UNA tarea de un plan aprobado, con TDD, y para.
+- **Reviewer:** revisa la spec como QA y valida la implementación RF por RF, sin modificar nada.
+
 ## Cómo probarlo
 
 1. `/sdd/spec 002-listado-temas listado de temas` → revisa `spec.md` en `borrador`.

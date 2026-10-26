@@ -10,7 +10,7 @@ Memoria del proyecto entre sesiones. Resume o elimina lo que ya no aporte.
 - **Objetivo:** Esqueleto mínimo y documentado para trabajar con agentes IA.
 - **Stack:** Next.js 16, React 19, TypeScript strict,
   Vite, Tailwind CSS, Node 24 LTS, npm, Prettier + ESLint, GitHub Actions.
-- **Estado:** v0.7 — AGENTS.md + MEMORY.md + 11 comandos (familia `/sdd/*` + commit + nuevo-componente) + 4 skills + MCP + SDD, sin app real.
+- **Estado:** v0.8 — AGENTS.md + MEMORY.md + 11 comandos (familia `/sdd/*` + `/publicar-git`, `/nuevo-componente`) + 5 skills + MCP + SDD + subagentes, sin app real.
 - **Estructura de referencia:** `app/` rutas, `components/` UI,
   `lib/` lógica, `public/` estáticos, `docs/` documentación del proyecto.
 - **Idiomas:** documentación en español, código y commits en inglés técnico.
@@ -34,7 +34,12 @@ Memoria del proyecto entre sesiones. Resume o elimina lo que ya no aporte.
 - 2026-10-06: Familia de 9 comandos `sdd-*` paso a paso (jubilados `/specify` y `/feature`, borrada `prompts/ssd/` absorbida). Skill `sdd` mezclada (puerta por fase, Estado, Definiciones, anti-palabras-vacías, Tn, >10→dividir, TDD por defecto con escape).
 - 2026-10-06: Comandos SDD movidos a `.opencode/commands/sdd/` (se invocan `/sdd/*`), sin numerar (el orden vive en `SDD.md` y `/sdd/status`).
 - 2026-10-06: Jubilado `/commit`, sustituido por `/publicar-git` (dos puertas + informa rama) y skill `publicar-git`.
+- 2026-10-06: `/publicar-git` probado de punta a punta (commit `3057b0e` + push a `origin/main`): comandos shell con `;` en vez de `&&` (PowerShell), mensaje siempre en inglés.
 - 2026-10-06: Prompts SDD en `prompts/ssd/` generalizados (rutas `specs/`, `npm test`, MCP `devtools`); AGENTS revisado (loop de vuelta a spec + precedencia acotada en cabecera).
+- 2026-10-26: Cerrada documentación de subagentes (AGENTS, `docs/SDD.md`, README) y descartada seguridad/CI para el momento.
+- 2026-10-26: Corregido YAML inválido en los 4 ficheros de `.opencode/agents/` (indentación de `permissions` rota el parseo → "cannot run as a subagent"). Tras arreglarlo, el ciclo con subagentes funciona.
+- 2026-10-26: Ciclo SDD con subagentes sobre el ejemplo `001-ejemplo-temas`: 3 rondas de QA (reviewer) + correcciones (planner). RF-7 retirado por duplicar RF-1; spec queda VEREDICTO: APROBADO; sugerencias opcionales aplicadas (RF-2 "temas válidos", checklist cita RF-1+RF-4) y Estado actualizado. plan.md/tasks.md coherentes.
+- 2026-10-26: Decisión: la spec de ejemplo NO se implementa todavía (esqueleto sin app real). El implementer paró correctamente en T1 al no existir proyecto npm (`node --test`/typecheck imposibles). Implementación queda para cuando se decida el bootstrap.
 
 ## Contexto activo
 - En curso: SDD terminada.
