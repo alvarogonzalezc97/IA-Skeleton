@@ -10,7 +10,7 @@ skills, MCP y flujo spec-driven (SDD).
 
 ## Estado
 
-Versión actual: **v0.7** — reglas + memoria + comandos + skills + MCP + SDD + subagentes, sin aplicación real todavía.
+Versión actual: **v0.7** — reglas + memoria + comandos + skills + MCP + SDD + subagentes.
 
 ## Contenido
 
@@ -28,8 +28,4 @@ Versión actual: **v0.7** — reglas + memoria + comandos + skills + MCP + SDD +
 
 - Cambio no trivial: loop SDD paso a paso (`/sdd/spec` → clarify → `/sdd/plan` → `/sdd/tasks` → `/sdd/implement` → `/sdd/validate`) con aprobación en cada fase.
 - Trivial: cambio directo, sin SDD.
-- Publicar: `/publicar-git` (dos puertas: propuesta de commit → aprobación → push).
-
-## Siguiente paso
-
-Primera feature real con SDD (spec → plan → tasks → implement → validate).
+- Publicar (A modo de ejemplo): `/publicar-git` (dos puertas: propuesta de commit → aprobación → push).
